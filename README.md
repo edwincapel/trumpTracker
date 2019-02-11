@@ -1,3 +1,8 @@
+# Python News Scraper with React[Part 1]
+Scrapes all instances of Trump on the news.
+
+link to medium post [here](https://medium.com/@edwinrc1026/python-news-scraper-with-react-part-1-971e1ed2fb7)
+
 # Install
 
 ```sh
