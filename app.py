@@ -5,15 +5,15 @@ import os
 
 NEWS_SOURCE = ['https://www.aljazeera.com/xml/rss/all.xml','http://www.wsj.com/xml/rss/3_7085.xml']
 
-FILE = 'data/articles.json';
-data = None;
+FILE = 'articles.json'
+data = None
 
 if os.path.isfile(FILE) and os.path.getsize(FILE) > 0:
     with open(FILE) as handle:  
         data = json.load(handle)
 else:
     data = {}
-    data['articles'] = {};
+    data['articles'] = {}
 
 for source in NEWS_SOURCE:
     d = feedparser.parse(source)
