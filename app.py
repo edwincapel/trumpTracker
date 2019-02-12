@@ -2,6 +2,7 @@ import feedparser
 import json
 import time
 import os
+import requests
 
 NEWS_SOURCE = ['https://www.aljazeera.com/xml/rss/all.xml','http://www.wsj.com/xml/rss/3_7085.xml']
 
@@ -24,3 +25,8 @@ for source in NEWS_SOURCE:
 
 with open(FILE, "w") as handle:
     json.dump(data, handle)
+
+url = 'https://jsonblob.com/api/jsonBlob/<blob_id>'
+headers = {'Content-Type': 'application/json'}
+
+requests.put(url, json=data, headers=headers)
